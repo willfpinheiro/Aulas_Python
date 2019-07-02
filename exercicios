@@ -1,0 +1,6 @@
+def ex001():
+    print('Ola, mundo!')
+
+def ex002():
+    
+    
