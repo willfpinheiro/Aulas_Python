@@ -2,5 +2,16 @@ def ex001():
     print('Ola, mundo!')
 
 def ex002():
+    a = input('Digite seu some: ')
+    #msg = ('Seja bem vindo '+a)
+    #print(msg)
+    msg = "Seja bem vindo, "
+    print('{}{}'.format(msg,a))
+def ex003():
+    a =int ((input('Digite um valor: ')))
+    b = int ((input('Digite um outro valor: ')))
+    soma = a+b
+    print('A soma entre {} e {} é {}'.format(a,b,soma))
+ex003()
     
     
