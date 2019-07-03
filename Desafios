@@ -1,8 +1,0 @@
-def des005():
-    a = int(input('Digite um numero: '))
-    print('O valor anterior é: {}\n e o valor posterio é: {}'.format(a-1,a+1))
-
-
-def des006():
-    a= int(input('Digite um numero: '))
-    print('O dobro é: {}\nO triplo é: {}\nA raiz quadrada é: {}'.format(a*2,a*3,pow(a,(1/2))))
