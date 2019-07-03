@@ -12,6 +12,13 @@ def ex003():
     b = int ((input('Digite um outro valor: ')))
     soma = a+b
     print('A soma entre {} e {} é {}'.format(a,b,soma))
-ex003()
+def ex004():
+    a = input('Digite algo: ')
+    print('O tipo primitivo é: ',type(a))
+    print('Só tem espaços: ', a.isspace())
+    print('É um numero: ',a.isnumeric())
+    print('É alfabetico?', a.isalpha())
+    print('É alfanumerico? ', a.isalnum())
+
     
     
