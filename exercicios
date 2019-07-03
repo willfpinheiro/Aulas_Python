@@ -7,11 +7,15 @@ def ex002():
     #print(msg)
     msg = "Seja bem vindo, "
     print('{}{}'.format(msg,a))
+    
+    
 def ex003():
     a =int ((input('Digite um valor: ')))
     b = int ((input('Digite um outro valor: ')))
     soma = a+b
     print('A soma entre {} e {} é {}'.format(a,b,soma))
+    
+    
 def ex004():
     a = input('Digite algo: ')
     print('O tipo primitivo é: ',type(a))
