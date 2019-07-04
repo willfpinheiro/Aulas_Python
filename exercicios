@@ -43,8 +43,11 @@ def ex008():
 
 def ex009():
     a = int(input('qual a tubuada que você deseja fazer?'))
+    b = ('-'*10)
+    print(b)
     print('{}*1={}\n{}*2={}\n{}*3={}\n{}*4={}\n{}*5={}\n{}*6={}\n{}*7={}\n{}*8={}\n{}*9={}'
           .format(a,a*1,a,a*2,a,a*3,a,a*4,a,a*5,a,a*6,a,a*7,a,a*8,a,a*9))
+    print(b)
           
 def ex010():
     a = float(input('Digite o valor em Reais: '))
