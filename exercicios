@@ -66,3 +66,15 @@ def ex012():
 def ex013():
     a = float(input('Valor do salario que será aumentado: R$'))
     print('O salario mudará de R${} para R${} com o ajuste de 15%.'.format(a,a+(a*0.15)))
+
+def ex014():
+    a = float(input('Coloque a temperatura em Celsius: '))
+    print('A temperatura {:.2f}ºC em: \nFahrenheit é {:.2f}ºF\nE em Kelvin é {:.2f}K'.format(a, (a * 9/5) + 32, (a + 273.15)))
+
+def ex015():
+    a = int(input('Quantos dias o carro ficou alugado: '))
+    b = float(input('Quantos quilometros rodados: '))
+    d = a * 60
+    k = b * 0.15
+    print('O carro rodou {:.3f}KM durante {} dias, valor devido é de: R${:.2f}'.format(b, a, d + k))
+
