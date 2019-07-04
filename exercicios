@@ -38,8 +38,8 @@ def ex007():
     print('A media do aluno é: {}'.format((a+b)/2))
 
 def ex008():
-    a = int(input('Coloque o numero em metros: '))
-    print('O numero convertido em cm é: {}\nO numero convertido em ml: {}'.format(a*100, a*1000))
+    a = float(input('Coloque o numero em metros: '))
+    print('O numero convertido em cm é: {:.2f}\nO numero convertido em ml: {:.2f}'.format(a*100, a*1000))
 
 def ex009():
     a = int(input('qual a tubuada que você deseja fazer?'))
