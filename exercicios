@@ -1,3 +1,8 @@
+import math
+import random
+import pygame
+import playsound
+
 def ex001():
     print('Ola, mundo!')
     
@@ -78,3 +83,49 @@ def ex015():
     k = b * 0.15
     print('O carro rodou {:.3f}KM durante {} dias, valor devido é de: R${:.2f}'.format(b, a, d + k))
 
+def ex016():
+    a = float(input('Coloque um numero: '))
+    print('O valor inteiro é: {}'.format(math.trunc(a)))
+    print('O valor inteiro é: {}'.format(int(a)))
+
+
+def ex017():
+    a = float(input('Coloque o Cateto oposto: '))
+    b = float(input('Coloque o cateto adjacente: '))
+    print('A hipotenusa é {:.3f}'.format(math.hypot(a, b)))
+    print('A hipotenusa é: {:.3f}'.format((a ** 2 + b ** 2) ** (1 / 2)))
+
+
+def ex018():
+    a = float(input('Coloque o angulo: '))
+    print('O seno é: {:.3f}\nA tangente é: {:.3f}\nO cosseno é: {:.3f}'
+          .format(math.sin(math.radians(a)), math.tan(math.radians(a)), math.cos(math.radians(a))))
+
+
+def ex019():
+    a = input('Nome do primeiro aluno: ')
+    b = input('Nome do segundo aluno: ')
+    c = input('Nome do terceiro aluno: ')
+    d = input('Nome do quarto aluno: ')
+    print('O aluno que irá apagar o quadro será: {}'.format(random.choice([a, b, c, d])))
+
+
+def ex020():
+    a = input('Nome do primeiro aluno: ')
+    b = input('Nome do segundo aluno: ')
+    c = input('Nome do terceiro aluno: ')
+    d = input('Nome do quarto aluno: ')
+    lista = [a, b, c, d]
+    print('A ordem de apresentação será: \n{}'.format(random.sample(lista, 4)))
+    random.shuffle(lista)
+    print('A ordem aleatoria é de: {}'.format(lista))
+
+
+def ex021():
+    pygame.mixer.init()
+    pygame.mixer.music.load('Kalimba.mp3')
+    pygame.mixer.music.play()
+    pygame.mixer.music.set_volume(100)
+    input('Agora você escuta?')
+    pygame.event.wait()
+    # playsound.playsound('Kalimba.mp3')
