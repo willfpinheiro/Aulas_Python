@@ -88,19 +88,16 @@ def ex016():
     print('O valor inteiro é: {}'.format(math.trunc(a)))
     print('O valor inteiro é: {}'.format(int(a)))
 
-
 def ex017():
     a = float(input('Coloque o Cateto oposto: '))
     b = float(input('Coloque o cateto adjacente: '))
     print('A hipotenusa é {:.3f}'.format(math.hypot(a, b)))
     print('A hipotenusa é: {:.3f}'.format((a ** 2 + b ** 2) ** (1 / 2)))
 
-
 def ex018():
     a = float(input('Coloque o angulo: '))
     print('O seno é: {:.3f}\nA tangente é: {:.3f}\nO cosseno é: {:.3f}'
           .format(math.sin(math.radians(a)), math.tan(math.radians(a)), math.cos(math.radians(a))))
-
 
 def ex019():
     a = input('Nome do primeiro aluno: ')
@@ -108,7 +105,6 @@ def ex019():
     c = input('Nome do terceiro aluno: ')
     d = input('Nome do quarto aluno: ')
     print('O aluno que irá apagar o quadro será: {}'.format(random.choice([a, b, c, d])))
-
 
 def ex020():
     a = input('Nome do primeiro aluno: ')
@@ -120,7 +116,6 @@ def ex020():
     random.shuffle(lista)
     print('A ordem aleatoria é de: {}'.format(lista))
 
-
 def ex021():
     pygame.mixer.init()
     pygame.mixer.music.load('Kalimba.mp3')
@@ -128,4 +123,53 @@ def ex021():
     pygame.mixer.music.set_volume(100)
     input('Agora você escuta?')
     pygame.event.wait()
-    # playsound.playsound('Kalimba.mp3')
+    # playsound.playsound('Kalimba.mp3')  
+    
+def ex022():
+    a = str(input('Qual o seu nome? ')).strip()
+    nome = a.split( )
+    print('Em maiusculo '.format(a.upper( )))
+    print('Em minusculo'.format(a.lower( )))
+    print('Quantidade de letras: '.format(len(''.join(nome)))) #len(a) - a.count(' ')
+    print(len(nome[0])) #a.find(' ')
+
+def ex023():
+    a = input('Digite o numero em milhar: ')
+    print('unidade: {}\nDezena: {}\nCentena: {}\nMilhar: {}'.format(a[3], a[2], a[1], a[0]))
+
+def ex023RC1():
+    a = int(input('Digite um numero: '))
+    m = a // 1000 %10
+    c = a // 100 %10
+    d = a // 10 %10
+    u = a // 1 %10
+    print('Milhar: {}\nCentena: {}\nDezena: {}\nUnidade: {}'.format(m,c,d,u))
+
+def ex024():
+    a = str(input('Digite o nome da cidade: ')).strip()
+    frase = a.upper()
+    b = frase.split()
+    c = b[0]
+    print('SANTO' in c)
+    #print(a[:5].upper() == 'SANTO')
+
+def ex025():
+    a = input('Digite o nome da pessoa: ').strip()
+    frase = a.upper()
+    print('SILVA' in frase)
+    #print('SILVA' in a.upper())
+
+def ex026():
+    a = str(input('Digite uma frase: ')).upper().strip()
+    print('Letra A aparece {} vezes'.format(a.count('A')))
+    print('A letra A aparece pela primeira vez na sequencia {}'.format(a.find('A')+1))
+    print('A letra A aparece pela ultima vez na {} sequencia'.format(a.rfind('A')+1))
+
+def ex027():
+    a = input('Digite seu nome completo: ').strip()
+    a = a.title()
+    b = a.find(' ')
+    c = a.rfind(' ')
+    print('Seu primeiro nome é: {}e seu ultimo nome é:{}'.format(a[:b], a[c:]))
+    #nome = a.split()
+    #print('Seu primeiro nome é {} e seu ultimo nome é {}'.format(nome[0], nome[len(nome)-1]))
