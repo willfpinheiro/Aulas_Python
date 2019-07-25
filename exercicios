@@ -2,6 +2,8 @@ import math
 import random
 import pygame
 import playsound
+import datetime
+import time
 
 def ex001():
     print('Ola, mundo!')
@@ -173,3 +175,89 @@ def ex027():
     print('Seu primeiro nome é: {}e seu ultimo nome é:{}'.format(a[:b], a[c:]))
     #nome = a.split()
     #print('Seu primeiro nome é {} e seu ultimo nome é {}'.format(nome[0], nome[len(nome)-1]))
+    
+    def ex028():
+    print('-+-'*20)
+    a = int(input('Qual o numero a maquina escolheu entre 0 e 5?'))
+    b = random.randint(0, 5)
+    print('Processando...')
+    time.sleep(2)
+    if a == b:
+        print('Parabens, você acertou')
+    else:
+        print('O valor era {}. Tente na proxima'.format(b))
+
+def ex029():
+    a = float(input('Qual a velociadde do carro?'))
+    if a <= 80:
+        print('Parabens, continue salvando vidas')
+    else:
+        print('Você esta dirigindo acima da velocidade permitida\n'
+              'irá pagar uma multa no valor de {:.2f}R$'.format((a-80)*7))
+
+def ex030():
+    a = float(input('Digite um numero: '))
+    if (a % 2) == 0:
+        print('Esse numero é par')
+    else:
+        print('Esse numero é impar')
+
+def ex031():
+    a = float(input('Quantos KM tem sua viagem? '))
+    if a <= 200:
+        print('Você ira pagar {}R$ pela viagem de {}KM'.format((a*0.5), a))
+    else:
+        print('Você irá pagar {}R$ pela viagem de {}KM'.format((a*0.45), a))
+
+def ex032():
+    a = int(input('Qual o ano quer saber se é bissexto(0 para ano atual): '))
+    if a == 0:
+        a = datetime.date.today().year
+    if a % 400 == 0:
+        print('Ano bissexto')
+    else:
+        print('Ano não bissexto')
+
+def ex033():
+    a = int(input('Primeiro numero: '))
+    b = int(input('Segundo numero: '))
+    c = int(input('Terceiro numero: '))
+    if a > b > c:
+        maior = a
+        menor = c
+    elif a > c > b:
+        maior = a
+        menor = b
+    elif c > b > a:
+        maior = c
+        menor = a
+    elif c > a >b:
+        maior = c
+        menor = b
+    elif b > a > c:
+        maior = b
+        menor = c
+    elif b > c > a:
+        maior = b
+        menor = a
+    else:
+        maior = 'inexistente'
+        menor = 'inexistente'
+    print('O maior é {} e o menor é {}'.format(maior,menor))
+
+def ex034():
+    a = float(input('Quanto é o salario que deseja aumentar: '))
+    if a >= 1250:
+        print('O salario irá aumentar para: {:.2f}R$'.format(a+(a*0.10)))
+    else:
+        print('O salario irá aumentar para: {:.2f}R$'.format(a+(a*0.15)))
+
+def ex035():
+    a = float(input('Primeira reta: '))
+    b = float(input('Segunda reta: '))
+    c = float(input('Terceira reta: '))
+    if (a+b) > c and (a+c) > b and (c+b) > a:
+        print('Com essas medidas é possivel fazer um triangulo')
+    else:
+        print('Com essas medidas não é possivel fazer um triangulo')
+
