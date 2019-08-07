@@ -260,4 +260,145 @@ def ex035():
         print('Com essas medidas é possivel fazer um triangulo')
     else:
         print('Com essas medidas não é possivel fazer um triangulo')
+def ex036():
+    a = float(input('Qual o valor da casa: '))
+    b = float(input('Qual o seu salario: '))
+    c = int(input('Tempo para pagamento: '))
+    if (a/(c*12)) >= (b*0.3):
+        print('O emprestimo não pode ser dado.')
+    else:
+        print('O emprestimo pode ser concedido, e o valor das parcelas será de R${:.2f}'.format((a/(c*12))))
 
+def ex037():
+    a = int(input('Qual o numero deseja converter?\n'))
+    b = int(input('Para binario digite 1\n'
+                  'Para Octal digite 2\n'
+                  'Para Hexadecimal digite 3'))
+    if b == 1:
+        print('O numero {} em binario é: {}'.format(a,bin(a)[2:]))
+    elif b == 2:
+        print('O numero {} em octal é: {}'.format(a, oct(a)[2:]))
+    elif b == 3:
+        print('O numero {} em hexadecimal é: {}'.format(a,hex(a)[2:]))
+    else:
+        print('Numero não reconhecido')
+
+def ex038():
+    a = float(input('Digite o primeiro numero: '))
+    b = float(input('Digite o segundo numero: '))
+    if a > b:
+        print('O primeiro valor é maior')
+    elif b > a:
+        print('O segundo valor é maior')
+    else:
+        print("Não existe valor maior, os dois são iguais")
+
+def ex039():
+    a = int(input('Ano de nascimento: '))
+    b = datetime.date.today().year
+    c = b - a
+    if c < 18:
+        print('Você deve se alistar, faltam {} anos, que será no ano de {}'.format(18-c, a + (18-c)))
+    elif c == 18:
+        print('Ja esta na hora de se alistar')
+    else:
+        print('Ja passou {} anos do prazo de alistamento, este foi em {}'.format(c - 18, a + 18))
+
+
+def ex040():
+    a = float(input('Primeira nota: '))
+    b = float(input('Segunda nota: '))
+    if (a+b)/2 < 5:
+        print('reprovado')
+    elif 7 > (a+b)/2 >= 5:
+        print('Recuperção')
+    else:
+        print('Aprovado')
+
+def ex041():
+    a = int(input('Qual o ano de nascimento: '))
+    b = datetime.date.today().year - a
+    print(b)
+    if b < 10:
+        print('mirin')
+    elif b <= 14:
+        print('infantil')
+    elif b <= 19:
+        print('junior')
+    elif b <= 25:
+        print('Sênior')
+    else:
+        print('Master')
+
+def ex042():
+    a = float(input('Primeira reta: '))
+    b = float(input('Segunda reta: '))
+    c = float(input('Terceira reta: '))
+    if (a+b) > c and (a+c) > b and (c+b) > a:
+        print('Com essas medidas é possivel fazer um triangulo', end='')
+        if a == b == c:
+            print('E forma um Triangulo equilatero')
+        elif a == b or a == c or b == c:
+            print('E forma um Triangulo Isoceles')
+        elif a != b != c != a:
+            print('E forma um triangulo escaleno')
+    else:
+        print('Com essas medidas não é possivel fazer um triangulo')
+
+def ex043():
+    a = float(input('Qual o peso: (Kg)'))
+    b = float(input('Qual a altura: (m)'))
+    c = a / (b**2)
+    print(c)
+    if c < 18.5:
+        print('Abaixo do peso')
+    elif 18.5 <= c < 25:
+        print('Peso ideal')
+    elif 25 <= c < 30:
+        print('Sobrepeso')
+    elif 30 <= c < 40:
+        print('Obesidade')
+    else:
+        print('Obesidade morbida')
+
+def ex044():
+    print('{:=^40}'.format(' Lojas Will '))
+    a = float(input('Valor do produto: '))
+    b = int(input('Entre com a forma de pagamento\n'
+                  '1 - Dinheiro/cheque à vista\n'
+                  '2 - cartão à vista\n'
+                  '3 - 2X no cartão\n'
+                  '4 - 3X ou mais no cartão\n'))
+    if b == 1:
+        print('O valor será: {:.2f}R$'.format(a - (a*0.1)))
+    elif b == 2:
+        print('O valor será: {:.2f}R$'.format(a - (a*0.05)))
+    elif b == 3:
+        print('O valor será: {:.2f}R$'.format(a))
+    elif b == 4:
+        print('O valor será: {:.2f}R$'.format(a + (a*0.20)))
+    else:
+        print('Forma de pagamento incorreta')
+
+def ex045():
+    print('Vamos Jogar Jokenpo')
+    a = random.randint(1, 3)
+    b = int(input('Escolha sua mão\n'
+                  '1 - Pedra\n'
+                  '2 - Papel\n'
+                  '3 - Tesoura\n'))
+    print('JO')
+    time.sleep(1)
+    print('KEN')
+    time.sleep(1)
+    print('PÔ')
+    time.sleep(1)
+    if b != 1 and b != 2 and b != 3:
+        print('Opção invalida')
+    elif a == b:
+        print('Empate')
+    elif a == 1 and b == 2 or a == 2 and b == 3 or a == 3 and b == 1:
+        print('Parabéns, você venceu')
+    else:
+        print('Eu ganhei, maquina no comando')
+    ex045()
