@@ -1,9 +1,9 @@
+import datetime
 import math
 import random
-import pygame
-import playsound
-import datetime
 import time
+import pygame
+
 
 def ex001():
     print('Ola, mundo!')
@@ -176,7 +176,7 @@ def ex027():
     #nome = a.split()
     #print('Seu primeiro nome é {} e seu ultimo nome é {}'.format(nome[0], nome[len(nome)-1]))
     
-    def ex028():
+def ex028():
     print('-+-'*20)
     a = int(input('Qual o numero a maquina escolheu entre 0 e 5?'))
     b = random.randint(0, 5)
@@ -428,4 +428,24 @@ def ex049():
         m = n * c
         print('{} x {} = {}'.format(n, c, m))
 
+def ex050():
+    s = 0
+    for c in range(0, 6):
+        n = int(input('Digite um numero: '))
+        if n % 2 == 0:
+            s += n
+    print('A soma dos pares é igual {}'.format(s))
 
+def ex051():
+    print(('{:*^40}'.format('Calculo de um PA')))
+    t = int(input('Qual o primeiro termo: '))
+    r = int(input('Qual a razão: '))
+    for c in range(0, 10):
+        print('Termo {} igual {}'.format(c+1, t))
+        t += r
+
+def ex052():
+    n = int(input('Digite um numero inteiro: '))
+    for c in range(1, n+1):
+        v = n % c
+        if v == 0
