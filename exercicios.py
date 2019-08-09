@@ -446,6 +446,51 @@ def ex051():
 
 def ex052():
     n = int(input('Digite um numero inteiro: '))
+    t = 0
     for c in range(1, n+1):
-        v = n % c
-        if v == 0
+        if n % c == 0:
+            t += 1
+    if t == 2:
+        print('numero primo')
+    else:
+        print('Numero não é primo')
+    ex052()
+
+def ex053():
+    t = 0
+    a = 'o lobo ama o bolo   '.strip()
+    a = a.split()
+    b = ''.join(a)
+    m = b[::-1]
+    print(m, b)
+    for c in range(0, len(b)):
+        #if b[c] == b[((len(m)-1)-c)]:
+        if b[c] == m[c]:
+            t += 1
+    if t == len(b):
+        print('Este numero é polindromo')
+
+def ex054():
+    menor = 0
+    maior = 0
+    for c in range(0, 4):
+        nasc = int(input('Digite o ano de nascimento: '))
+        if nasc > 2019:
+            print('Data invalida, favor coloque uma data antes de 2019'
+                  'Essa Variavel nao será usada')
+        elif datetime.date.today().year - nasc < 21:
+            menor += 1
+        else:
+            maior += 1
+    print('Temos {} maiores de idade e {} menores'.format(maior, menor))
+
+def ex055():
+    maior = float(-100000000000000000)
+    menor = float(100000000000000000)
+    for c in range(0, 5):
+        peso = float(input('Coloque um peso: '))
+        if peso >= maior:
+            maior = peso
+        elif peso <= menor:
+            menor = peso
+    print('O maior peso é {} e o menor é {}'.format(maior, menor))
