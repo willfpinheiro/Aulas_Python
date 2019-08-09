@@ -494,3 +494,13 @@ def ex055():
         elif peso <= menor:
             menor = peso
     print('O maior peso é {} e o menor é {}'.format(maior, menor))
+
+def ex056():
+    idade = [0,0,0,0]
+    #soma = 0
+    for c in range(0, 4):
+        nome = input('Qual o nome: ')
+        idade[c] = int(input('Qual a idade: '))
+        gen = input('Qual seu genero: ')
+       # soma = idade[c]+ soma
+    print('A idade media das pessoas informadas é {}'.format((sum(idade))/4))
