@@ -146,7 +146,7 @@ def ex021():
     pygame.mixer.music.set_volume(100)
     input('Agora você escuta?')
     pygame.event.wait()
-    # playsound.playsound('Kalimba.mp3')  
+    # playsound.playsound('Kalimba.mp3')
 
 
 def ex022():
@@ -589,7 +589,7 @@ def ex056():
 def ex057():
     s = ' '
     while s not in 'SN':
-      s = str(input('Deseja sair? [S/N]')).upper()
+      s = str(input('Deseja sair? [S/N]')).upper().strip()
 
 
 def ex058():
@@ -598,9 +598,55 @@ def ex058():
     maq = random.randint(0, 5)
     print('Processando...')
     time.sleep(2)
-    while True:
+    acertou = 'nao acertou'
+    conterro = 1
+    while acertou != 'acertou':
         if user == maq:
-            print('Parabens, você acertou')
+            acertou = 'acertou'
         else:
             print('Tente novamente')
-    
+            user = int(input('Qual o numero a maquina escolheu entre 0 e 5?'))
+            conterro += 1
+    print('Parabens, você acertou com {} tentativas'.format(conterro))
+
+def ex059():
+    print('Entre com os variaveis')
+    num1 = float(input('Numero 1: '))
+    num2 = float(input('Numero 2: '))
+    result = 0
+    var = 0
+    while var != 5:
+        var = int(input('''
+        [1] - Somar
+        [2] - Multiplicar
+        [3] - Maior
+        [4] - Novos Numeros
+        [5] - Sair do programa'''))
+        if var == 1:
+            print('O valor da operação é {}'.format(num1+num2))
+        elif var == 2:
+            print('O valor da operação é {}'.format(num1 * num2))
+        elif var == 3:
+            if num2 == num1:
+                print('Numeros iguais')
+            elif num2 > num1:
+                print('O numero {} é maior que {}'.format(num2, num1))
+            else:
+                print('O numero {} é maior que o numero {}'.format(num1, num2))
+        elif var == 4:
+            num1 = float(input('Numero 1: '))
+            num2 = float(input('Numero 2: '))
+        elif var == 5:
+            print('Saindo do sistema tenha um bom dia')
+        else:
+            print('Opção invalida')
+
+def ex060():
+    num = int(input('Digite um numero: '))
+    cont = num
+    print('{}!'.format(num), end=' = ')
+    while cont != 0:
+        print('{}'.format(cont), end='x')
+        cont -= 1
+
+ex060()
