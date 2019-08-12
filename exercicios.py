@@ -593,4 +593,14 @@ def ex057():
 
 
 def ex058():
+    print('-+-' * 20)
+    user = int(input('Qual o numero a maquina escolheu entre 0 e 5?'))
+    maq = random.randint(0, 5)
+    print('Processando...')
+    time.sleep(2)
+    while True:
+        if user == maq:
+            print('Parabens, você acertou')
+        else:
+            print('Tente novamente')
     
