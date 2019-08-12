@@ -505,34 +505,39 @@ def ex052():
     t = 0
     for c in range(1, n + 1):
         if n % c == 0:
+            print('\033[33m {}'.format(c), end=' ')
             t += 1
+        else:
+            print('\033[31m {}'.format(c), end=' ')
+
     if t == 2:
-        print('numero primo')
+        print('\n\033[mNumero primo')
     else:
-        print('Numero não é primo')
+        print('\n\033[mNumero não é primo')
     ex052()
 
 
 def ex053():
     t = 0
-    a = 'o lobo ama o bolo   '.strip()
-    a = a.split()
-    b = ''.join(a)
-    m = b[::-1]
-    print(m, b)
-    for c in range(0, len(b)):
-        # if b[c] == b[((len(m)-1)-c)]:
-        if b[c] == m[c]:
+    a = input('Digite uma frase: ').strip().upper()
+    palavras = a.split()
+    junto = ''.join(palavras)
+    m = junto[::-1]
+    for c in range(0, len(junto)):
+        # if b[c] == b[((len(m)-1)-c)]: Posso fazer uma varredura inversa na palavra
+        if junto[c] == m[c]:
             t += 1
-    if t == len(b):
-        print('Este numero é polindromo')
-
+    print('A frase digitada é {} e o inverso é {}'.format(junto,m))
+    if t == len(junto) or junto == m:
+        print('Este frase é polindromo')
+    else:
+        print('Não é um polindrome')
 
 def ex054():
     menor = 0
     maior = 0
-    for c in range(0, 4):
-        nasc = int(input('Digite o ano de nascimento: '))
+    for c in range(1, 8):
+        nasc = int(input('Digite o ano de nascimento da {}º pessoa: '.format(c)))
         if nasc > 2019:
             print('Data invalida, favor coloque uma data antes de 2019'
                   'Essa Variavel nao será usada')
@@ -544,14 +549,18 @@ def ex054():
 
 
 def ex055():
-    maior = float(-100000000000000000)
-    menor = float(100000000000000000)
-    for c in range(0, 5):
-        peso = float(input('Coloque um peso: '))
-        if peso >= maior:
+    maior = float(0)
+    menor = float(0)
+    for c in range(1, 6):
+        peso = float(input('Coloque um peso da {}º: '.format(c)))
+        if c == 1:
             maior = peso
-        elif peso <= menor:
             menor = peso
+        else:
+            if peso > maior:
+                maior = peso
+            if peso < menor:
+                menor = peso
     print('O maior peso é {} e o menor é {}'.format(maior, menor))
 
 
@@ -561,8 +570,9 @@ def ex056():
     quan_mulher = 0
     homem = 'Não foi citado '
     # soma = 0
-    for c in range(0, 4):
-        nome = input('Qual o nome: ')
+    for c in range(1, 5):
+        print('--- {}º Pessoa ---'.format(c))
+        nome = input('Qual o nome: ').strip()
         idade[c] = int(input('Qual a idade: '))
         gen = int(input('Qual seu genero: 0 - Mulher \n1 - Homem \n2 - Outro'))
         if gen == 1 and idade[c] >= velho:
@@ -574,3 +584,13 @@ def ex056():
     print('''A idade media das pessoas informadas é {}
     O homem mais velho é {}
     Temos {} mulheres com menos de 20'''.format(media, homem, quan_mulher))
+
+
+def ex057():
+    s = ' '
+    while s not in 'SN':
+      s = str(input('Deseja sair? [S/N]')).upper()
+
+
+def ex058():
+    
