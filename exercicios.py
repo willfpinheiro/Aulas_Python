@@ -644,9 +644,25 @@ def ex059():
 def ex060():
     num = int(input('Digite um numero: '))
     cont = num
+    resul = 1
     print('{}!'.format(num), end=' = ')
     while cont != 0:
-        print('{}'.format(cont), end='x')
+        if cont == 1:
+            print('{}'.format(cont), end=' = ')
+        else:
+            print('{}'.format(cont), end='x')
+        resul = resul * cont
         cont -= 1
+    print(resul)
 
-ex060()
+
+def ex061():
+    print(('{:*^40}'.format('Calculo de um PA')))
+    t = int(input('Qual o primeiro termo: '))
+    r = int(input('Qual a razão: '))
+    c =1
+    while c != 11:
+        print('Termo {} igual {}'.format(c, t))
+        c += 1
+        t += r
+
