@@ -666,3 +666,22 @@ def ex061():
         c += 1
         t += r
 
+def ex062():
+    print(('{:*^40}'.format('Calculo de um PA')))
+    prit = int(input('Qual o primeiro termo: '))
+    r = int(input('Qual a razão: '))
+    c = termo = 1
+    while termo != 0:
+        termo = int(input('Quantos termos quer mostrar: '))
+        while c != (termo + 1):
+            print('Termo {} igual {}'.format(c, prit))
+            c += 1
+            prit += r
+
+
+def ex063():
+    n = 1
+
+    print(((pow(1 + (math.sqrt(5)), n)) - (pow(1 - (math.sqrt(5)), n))) / pow(2, n) + (math.sqrt(5)))
+    print('{}{}'.format(2 ** 2, pow(2, 2)))
+ex063()
