@@ -680,8 +680,45 @@ def ex062():
 
 
 def ex063():
-    n = 1
+    val1 = 0
+    resul = val2 = 1
+    cont = int(input('Valor da razão: ')) -1
+    print(resul, end=', ')
+    while cont != 0:
+        cont -= 1
+        resul = val1 + val2
+        val1 = val2
+        val2 = resul
+        if cont != 0:
+            print(resul, end=', ')
+        else:
+            print(resul)
+def ex064():
+    cont = num = resul = 0
+    while num != 999:
+        num = int(input('Digite um numero: '))
+        if num != 999:
+            cont += 1
+            resul = resul + num
+    print('Foram digitados {} numeros e seu somatorio é {}'.format(cont, resul))
 
-    print(((pow(1 + (math.sqrt(5)), n)) - (pow(1 - (math.sqrt(5)), n))) / pow(2, n) + (math.sqrt(5)))
-    print('{}{}'.format(2 ** 2, pow(2, 2)))
-ex063()
+def ex065():
+    pri = 0
+    continuar = 'S'
+    while continuar == 'S':
+        num = int(input('Digite um valor: '))
+        if pri == 0:
+            maior = menor = media = num
+            continuar = str(input('Deseja continuar? [S/N]')).upper().strip()
+            pri += 1
+        else:
+            if num > maior:
+                maior = num
+            if num < menor:
+                menor = num
+            media = (media + num)
+            pri += 1
+            continuar = str(input('Deseja continuar? [S/N]')).upper().strip()
+    if pri != 1:
+        media = media / (pri)
+    print('A media é {}, o Maior é {} e o menor {}\n{}'.format(media,maior,menor, pri))
