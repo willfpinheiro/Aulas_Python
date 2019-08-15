@@ -685,7 +685,6 @@ def ex062():
             c += 1
             prit += r
 
-
 def ex063():
     val1 = 0
     resul = val2 = 1
