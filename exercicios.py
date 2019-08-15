@@ -649,6 +649,7 @@ def ex059():
 
 def ex060():
     num = int(input('Digite um numero: '))
+    # f = math.factorial(num)
     cont = num
     resul = 1
     print('{}!'.format(num), end=' = ')
@@ -657,7 +658,7 @@ def ex060():
             print('{}'.format(cont), end=' = ')
         else:
             print('{}'.format(cont), end='x')
-        resul = resul * cont
+        resul *= cont
         cont -= 1
     print(resul)
 
