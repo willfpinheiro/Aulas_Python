@@ -730,3 +730,25 @@ def ex065():
     if pri != 1:
         media = media / pri
     print('A media é {}, o Maior é {} e o menor {}\n'.format(media, maior, menor))
+
+def ex066():
+    cont = num = resul = 0
+    while True:
+        num = int(input('Digite um numero: [999 para parar]  '))
+        if num == 999:
+            break
+        resul += num
+        cont += 1
+    print(f'Foram digitados {cont} numeros e seu somatorio é {resul}')
+
+def ex067():
+    while True:
+        num = int(input('Quer ver a tabuada de qual valor? '))
+
+        if num < 0:
+            break
+        print('-' * 20)
+        for c in range(1, 11):
+            print('{} x {} = {}'.format(num, c, (num*c)))
+        print('-' * 20)
+
