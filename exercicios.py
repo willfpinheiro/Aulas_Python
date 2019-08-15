@@ -705,7 +705,7 @@ def ex063():
 def ex064():
     cont = num = resul = 0
     while num != 999:
-        num = int(input('Digite um numero: '))
+        num = int(input('Digite um numero: [999 para parar]'))
         if num != 999:
             cont += 1
             resul = resul + num
