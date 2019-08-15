@@ -686,19 +686,22 @@ def ex062():
             prit += r
 
 def ex063():
-    val1 = 0
-    resul = val2 = 1
-    cont = int(input('Valor da razão: ')) -1
-    print(resul, end=', ')
-    while cont != 0:
-        cont -= 1
+    val2 = 1
+    resul = val1 = 0
+    n = int(input('Valor da razão: '))
+    print('{}, {}'.format(val1, val2), end=', ')
+    cont = 3
+    while cont <= n:
+        cont += 1
         resul = val1 + val2
         val1 = val2
         val2 = resul
-        if cont != 0:
+        if cont <= n:
             print(resul, end=', ')
         else:
             print(resul)
+
+
 def ex064():
     cont = num = resul = 0
     while num != 999:
