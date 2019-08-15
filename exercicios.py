@@ -718,7 +718,6 @@ def ex065():
         num = int(input('Digite um valor: '))
         if pri == 0:
             maior = menor = media = num
-            continuar = str(input('Deseja continuar? [S/N]')).upper().strip()
             pri += 1
         else:
             if num > maior:
@@ -727,7 +726,7 @@ def ex065():
                 menor = num
             media = (media + num)
             pri += 1
-            continuar = str(input('Deseja continuar? [S/N]')).upper().strip()
+        continuar = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
     if pri != 1:
-        media = media / (pri)
-    print('A media é {}, o Maior é {} e o menor {}\n{}'.format(media,maior,menor, pri))
+        media = media / pri
+    print('A media é {}, o Maior é {} e o menor {}\n'.format(media, maior, menor))
