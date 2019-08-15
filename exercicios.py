@@ -587,27 +587,31 @@ def ex056():
 
 
 def ex057():
-    s = ' '
-    while s not in 'SN':
-      s = str(input('Deseja sair? [S/N]')).upper().strip()
-
+    s = str(input('Informe seu sexo: [M/F]')).upper().strip()
+    while s not in 'MF':
+      s = str(input('Dados invalidaos. Informe seu sexo: [M/F]')).upper().strip()
+    print('Dados cadastrados com sucesso')
 
 def ex058():
     print('-+-' * 20)
-    user = int(input('Qual o numero a maquina escolheu entre 0 e 5?'))
-    maq = random.randint(0, 5)
-    print('Processando...')
-    time.sleep(2)
+    print('Vamos brincar de adivinhação?')
+    print('-+-' * 20)
+    maq = random.randint(0, 10)
     acertou = 'nao acertou'
     conterro = 1
     while acertou != 'acertou':
+        user = int(input('Qual o numero a maquina escolheu entre 0 e 10?'))
         if user == maq:
             acertou = 'acertou'
         else:
+            if user > maq:
+                print('Menos...', end='')
+            if user < maq:
+                print('Mais... ', end='')
             print('Tente novamente')
-            user = int(input('Qual o numero a maquina escolheu entre 0 e 5?'))
             conterro += 1
     print('Parabens, você acertou com {} tentativas'.format(conterro))
+
 
 def ex059():
     print('Entre com os variaveis')
@@ -621,7 +625,8 @@ def ex059():
         [2] - Multiplicar
         [3] - Maior
         [4] - Novos Numeros
-        [5] - Sair do programa'''))
+        [5] - Sair do programa
+        Qual a sua opção: '''))
         if var == 1:
             print('O valor da operação é {}'.format(num1+num2))
         elif var == 2:
@@ -637,9 +642,10 @@ def ex059():
             num1 = float(input('Numero 1: '))
             num2 = float(input('Numero 2: '))
         elif var == 5:
-            print('Saindo do sistema tenha um bom dia')
+            print('Saindo do sistema, volte sempre')
         else:
             print('Opção invalida')
+
 
 def ex060():
     num = int(input('Digite um numero: '))
