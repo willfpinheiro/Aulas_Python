@@ -752,3 +752,57 @@ def ex067():
             print('{} x {} = {}'.format(num, c, (num*c)))
         print('-' * 20)
 
+def ex068():
+    print('{}'.format('VAMOS JOGAR PAR OU IMPAR'))
+    cont = 0
+    while True:
+        jogador = int(input('Seu valor:  '))
+        tipo = str(input('Você quer par ou impar: (P/I) ')).upper().strip()[0]
+        computador = random.randint(0, 10)
+        par = (jogador + computador) % 2
+        if tipo == 'P' and par == 0:
+            cont += 1
+            print(f'O PC jogou {computador} e você {jogador}. Deu PAR')
+        elif tipo == 'I' and par == 1:
+            cont += 1
+            print(f'O PC jogou {computador} e você {jogador}. Deu IMPAR')
+        else:
+            print(f'O PC jogou {computador} e você {jogador}. Voce perdeu com {cont} vitorias')
+            break
+def ex069():
+    contidade = conthomens = contmulher = 0
+    while True:
+        idade = int(input('Qual sua idade: '))
+        while True:
+            sexo = input('Qual seu sexo: ').upper().strip()[0]
+            if sexo in ('MFmf'):
+                break
+        if idade >= 18:
+            contidade += 1
+        if sexo == 'M':
+            conthomens += 1
+        if sexo == 'F' and idade < 20:
+            contmulher += 1
+        while True:
+            continuar = str(input('Quer continuar? (S/N) ')).upper().strip()[0]
+            if continuar in ('SN'):
+                break
+        if continuar == 'N':
+            break
+    print(f'Pessoas maiores de 18, são {contidade}\n'
+          f'{conthomens} homens foram cadastrados\n'
+          f'Mulheres menores de 20 anos, são {contmulher}')
+
+def ex070():
+    valorcompra = contmaior = 0
+    nomebarato = ''
+    while True:
+        nome = str(input('Nome: ')).upper()
+        preco = float(input('Preço: '))
+        while True:
+            continuar = str(input('Quer continuar? (S/N) ')).upper().strip()[0]
+            if continuar in ('SN'):
+                break
+        if continuar == 'N':
+            break
+ex070()
