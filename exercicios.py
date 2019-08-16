@@ -744,13 +744,14 @@ def ex066():
 def ex067():
     while True:
         num = int(input('Quer ver a tabuada de qual valor? '))
-
         if num < 0:
             break
         print('-' * 20)
         for c in range(1, 11):
-            print('{} x {} = {}'.format(num, c, (num*c)))
+            print(f'{num} x {c} = {num*c}')
         print('-' * 20)
+    print('Programa encerrado')
+
 
 def ex068():
     print('{}'.format('VAMOS JOGAR PAR OU IMPAR'))
