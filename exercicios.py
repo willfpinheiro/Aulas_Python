@@ -794,15 +794,58 @@ def ex069():
           f'Mulheres menores de 20 anos, são {contmulher}')
 
 def ex070():
-    valorcompra = contmaior = 0
+    valorcompra = contmaior = maisbarato = 0
     nomebarato = ''
     while True:
         nome = str(input('Nome: ')).upper()
-        preco = float(input('Preço: '))
+        preco = float(input('Preço: R$'))
+        valorcompra += preco
+        if preco >= 1000:
+            contmaior += 1
+        if nomebarato == '':
+            nomebarato = nome
+            maisbarato = preco
+        elif maisbarato > preco:
+            nomebarato = nome
         while True:
             continuar = str(input('Quer continuar? (S/N) ')).upper().strip()[0]
             if continuar in ('SN'):
                 break
         if continuar == 'N':
             break
-ex070()
+    print(f'Total gasto {valorcompra}, foram comprados {contmaior} produtos acima de 1000R$ e o mais barato é o {nomebarato}')
+
+
+def ex071():
+    valor = rest = int(input('Quanto quer sacar: R$'))
+    cont50 = cont20 = cont10 = cont1 = 0
+    while True:
+        while True:
+            if rest - 50 >= 0:
+                cont50 += 1
+                rest -= 50
+            else:
+                break
+        while True:
+            if rest - 20 >= 0:
+                cont20 += 1
+                rest -= 20
+            else:
+                break
+        while True:
+            if rest - 10 >= 0:
+                cont10 += 1
+                rest -= 10
+            else:
+                break
+        while True:
+            if rest - 1 >= 0:
+                cont1 += 1
+                rest -= 1
+            else:
+                break
+        print(f'A quantidade de 50 {cont50} '
+              f'A quantidade de 20 {cont20} '
+              f'A quantidade de 10 {cont10} '
+              f'A quantidade de 01 {cont1}')
+        break
