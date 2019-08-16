@@ -732,7 +732,7 @@ def ex065():
     print('A media é {}, o Maior é {} e o menor {}\n'.format(media, maior, menor))
 
 def ex066():
-    cont = num = resul = 0
+    cont = resul = 0
     while True:
         num = int(input('Digite um numero: [999 para parar]  '))
         if num == 999:
