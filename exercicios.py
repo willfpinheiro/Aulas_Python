@@ -803,7 +803,7 @@ def ex070():
     valorcompra = contmaior = maisbarato = 0
     nomebarato = ''
     while True:
-        nome = str(input('Nome: ')).upper()
+        nome = str(input('Nome: '))
         preco = float(input('Preço: R$'))
         valorcompra += preco
         if preco >= 1000:
@@ -813,13 +813,13 @@ def ex070():
             maisbarato = preco
         elif maisbarato > preco:
             nomebarato = nome
-        while True:
+        continuar = ' '
+        while continuar not in 'SN':
             continuar = str(input('Quer continuar? (S/N) ')).upper().strip()[0]
-            if continuar in ('SN'):
-                break
         if continuar == 'N':
             break
-    print(f'Total gasto {valorcompra}, foram comprados {contmaior} produtos acima de 1000R$ e o mais barato é o {nomebarato}')
+    print('{:=^40}'.format(' Fim da Compra '))
+    print(f'Total gasto R${valorcompra} \nforam comprados {contmaior} produtos acima de 1000R$ \nO mais barato é o {nomebarato}')
 
 
 def ex071():
