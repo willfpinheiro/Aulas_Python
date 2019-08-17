@@ -758,7 +758,9 @@ def ex068():
     cont = 0
     while True:
         jogador = int(input('Seu valor:  '))
-        tipo = str(input('Você quer par ou impar: (P/I) ')).upper().strip()[0]
+        tipo = ' '
+        while tipo not in 'PI':
+            tipo = str(input('Você quer par ou impar: (P/I) ')).upper().strip()[0]
         computador = random.randint(0, 10)
         par = (jogador + computador) % 2
         if tipo == 'P' and par == 0:
@@ -770,20 +772,23 @@ def ex068():
         else:
             print(f'O PC jogou {computador} e você {jogador}. Voce perdeu com {cont} vitorias')
             break
+
+
 def ex069():
     contidade = conthomens = contmulher = 0
     while True:
         idade = int(input('Qual sua idade: '))
-        while True:
+        #validação de string
+        sexo = ' '
+        while sexo not in 'MF':
             sexo = input('Qual seu sexo: ').upper().strip()[0]
-            if sexo in ('MFmf'):
-                break
         if idade >= 18:
             contidade += 1
         if sexo == 'M':
             conthomens += 1
         if sexo == 'F' and idade < 20:
             contmulher += 1
+        #Outra validação de string
         while True:
             continuar = str(input('Quer continuar? (S/N) ')).upper().strip()[0]
             if continuar in ('SN'):
