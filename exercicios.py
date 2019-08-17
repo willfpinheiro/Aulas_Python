@@ -823,6 +823,9 @@ def ex070():
 
 
 def ex071():
+    print('=' * 30)
+    print('{:^30}'.format())
+    print('=' * 30)
     valor = rest = int(input('Quanto quer sacar: R$'))
     cont50 = cont20 = cont10 = cont1 = 0
     while True:
