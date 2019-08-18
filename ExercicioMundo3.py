@@ -56,4 +56,20 @@ def ex075():
         print('Nenhum')
 
 def ex076():
-    
+    num = ('Pão', 0.40, 'Açucar', 1.95, 'farinha', 2.40, 'Note', 1999.99)
+    print('-' * 30)
+    print('{: ^30}'.format('Listagem de Preços'))
+    print('-' * 30)
+    for pos, c in enumerate(num):
+        if pos % 2 == 0:
+            print(f'{c:.<20}', end='')
+        else:
+            print(f'R${c: >8}')
+
+def ex077():
+    palavras = ('Palmeiras', 'remo', 'tuna', 'paysandu', 'Aguia de maraba', 'tabajara', 'Gremio', 'Cruzeiro', 'Atletico', 'Paranaense', 'Flamengo', 'Corinthians', 'Santos', 'Vasco da Gama', 'Bahia', 'Fluminense', 'Sao Paulo', 'Botafogo', 'Internacional', 'Atletico', 'Chapecoense')
+    for c in range(0, len(palavras)):
+        separada = str(palavras[c]).upper().strip()
+        print(separada)
+        print(f'Na palavra {separada} temos: ')
+ex077()
