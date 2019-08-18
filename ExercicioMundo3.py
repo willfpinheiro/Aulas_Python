@@ -69,7 +69,9 @@ def ex076():
 def ex077():
     palavras = ('Palmeiras', 'remo', 'tuna', 'paysandu', 'Aguia de maraba', 'tabajara', 'Gremio', 'Cruzeiro', 'Atletico', 'Paranaense', 'Flamengo', 'Corinthians', 'Santos', 'Vasco da Gama', 'Bahia', 'Fluminense', 'Sao Paulo', 'Botafogo', 'Internacional', 'Atletico', 'Chapecoense')
     for c in range(0, len(palavras)):
-        separada = str(palavras[c]).upper().strip()
-        print(separada)
-        print(f'Na palavra {separada} temos: ')
-ex077()
+        separada = str(palavras[c]).lower().strip()
+        print(f'Na palavra {separada} temos: ', end='')
+        for cont in range(0, len(separada)):
+            if separada[cont] in 'aeiou':
+                print(separada[cont], end=' ')
+        print('')
