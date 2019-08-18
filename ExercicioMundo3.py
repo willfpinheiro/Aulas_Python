@@ -25,17 +25,11 @@ def ex073():
 
 def ex074():
     numrand = ((random.randint(0, 10)), (random.randint(0,10)), random.randint(0,10), random.randint(0,10), random.randint(0,10))
-    print(f'Os valores sorteados foram {numrand}')
-    for c in range(0, 5):
-        if c == 0:
-            menor = numrand[c]
-            maior = numrand[c]
-        if numrand[c] < menor:
-            menor = numrand[c]
-        if numrand[c] > maior:
-            maior = numrand[c]
-    print(f'O maior é {maior}\nO menor é {menor}')
-
+    print(f'Os valores sorteados foram: ', end='')
+    for n in numrand:
+        print(f'{n} ', end='')
+    print(f'\nO maior é {max(numrand)}\nO menor é {min(numrand)}')
+ex074()
 
 def ex075():
     count = 0
