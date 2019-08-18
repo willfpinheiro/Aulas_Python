@@ -29,23 +29,24 @@ def ex074():
     for n in numrand:
         print(f'{n} ', end='')
     print(f'\nO maior é {max(numrand)}\nO menor é {min(numrand)}')
-ex074()
+
 
 def ex075():
     count = 0
-    num = (int(input("Digite um valor: ")), int(input("Digite um valor: ")), int(input("Digite um valor: ")), int(input("Digite um valor: ")))
+    num = (int(input("Digite um valor: ")), int(input("Digite outro valor: ")), int(input("Digite mais um valor: ")), int(input("Digite o ultimo valor: ")))
     print(f'O numero 9 repetiu {num.count(9)} vezes')
-    if num.count(3) == 0:
+    if 3 not in num:
         print('O numero 3 não foi digitado')
     else:
         print(f'O primeiro 3 apareceu na posição: {num.index(3)+1}')
     print('Os numeros pares foram: ', end='')
-    for c in range(0, 4):
-        if num[c] % 2 == 0:
-            print(num[c], end=' ')
+    for c in num:
+        if c % 2 == 0:
+            print(c, end=' ')
             count += 1
     if c == 3 and count == 0:
         print('Nenhum')
+
 
 def ex076():
     num = ('Pão', 0.40, 'Açucar', 1.95, 'farinha', 2.40, 'Note', 1999.99)
