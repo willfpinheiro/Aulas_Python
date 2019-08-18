@@ -1,3 +1,4 @@
+import random
 def ex072():
     numero = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
     print(numero[0])
@@ -25,3 +26,34 @@ def ex073():
 
 
 def ex074():
+    numrand = ((random.randint(0, 10)), (random.randint(0,10)), random.randint(0,10), random.randint(0,10), random.randint(0,10))
+    print(f'Os valores sorteados foram {numrand}')
+    for c in range(0, 5):
+        if c == 0:
+            menor = numrand[c]
+            maior = numrand[c]
+        if numrand[c] < menor:
+            menor = numrand[c]
+        if numrand[c] > maior:
+            maior = numrand[c]
+    print(f'O maior é {maior}\nO menor é {menor}')
+
+
+def ex075():
+    count = 0
+    num = (int(input("Digite um valor: ")), int(input("Digite um valor: ")), int(input("Digite um valor: ")), int(input("Digite um valor: ")))
+    print(f'O numero 9 repetiu {num.count(9)} vezes')
+    if num.count(3) == 0:
+        print('O numero 3 não foi digitado')
+    else:
+        print(f'O primeiro 3 apareceu na posição: {num.index(3)+1}')
+    print('Os numeros pares foram: ', end='')
+    for c in range(0, 4):
+        if num[c] % 2 == 0:
+            print(num[c], end=' ')
+            count += 1
+    if c == 3 and count == 0:
+        print('Nenhum')
+
+def ex076():
+    
