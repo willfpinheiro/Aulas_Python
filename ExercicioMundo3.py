@@ -11,3 +11,17 @@ def ex072():
     print(f'Voce digitou o numero {numero[num]}')
 
 
+def ex073():
+    brasileirao = ('Palmeiras', 'remo', 'tuna', 'paysandu', 'Aguia de maraba', 'tabajara', 'Grêmio', 'Cruzeiro', 'Atlético', 'Paranaense', 'Flamengo', 'Corinthians', 'Santos', 'Vasco da Gama', 'Bahia', 'Fluminense', 'São Paulo', 'Botafogo', 'Internacional', 'Atlético', 'Chapecoense')
+    print('-='*20)
+    print(f'Os 5 primeiros colocados são: {brasileirao[0:5]}')
+    print('-=' * 20)
+    print(f'Os 4 ultimos são: {brasileirao[-4:]}')
+    print('-=' * 20)
+    print(f'Em ordem alfabetica: {sorted(brasileirao)}')
+    print('-=' * 20)
+    print(f'A Chapecoense esta na {brasileirao.index("Chapecoense")-1}ª colocação')
+    print('-=' * 20)
+
+
+def ex074():

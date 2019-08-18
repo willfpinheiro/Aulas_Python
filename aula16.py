@@ -23,7 +23,7 @@ print(len(lanche))
 #      print(f'eu vou comer {comida} na posição {pos+1}')
 # print('Eu comi muito')
 
-#Embaralhar uma tupla
+#Organizar uma tupla em ordem alfabetica
 # print(sorted(lanche))
 
 #junçao de tuplas
