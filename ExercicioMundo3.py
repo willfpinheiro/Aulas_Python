@@ -67,3 +67,22 @@ def ex077():
         for letras in palavras:
             if letras.lower() in 'aeiou':
                 print(letras, end=' ')
+
+def ex078():
+    lista = []
+    for cont in range(0, 5):
+        lista.append(int(input(f'Digite o valor na posição {cont}: ')))
+    print('=-'*50)
+    print(f'Voce digitou os valores {lista}')
+    print(f'O maior valor digitado na lista foi {max(lista)} nas posições: ', end='')
+    for n, maior in enumerate(lista):
+        if maior == max(lista):
+            print(f'{n}...', end=' ')
+    print(f'\nO menor valor digitado na lista foi {min(lista)}, nas posições: ', end='')
+    for i, menor in enumerate(lista):
+        if menor == min(lista):
+            print(f'{i}...', end=' ')
+
+
+def ex079():
+    
