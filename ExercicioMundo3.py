@@ -85,4 +85,22 @@ def ex078():
 
 
 def ex079():
-    
+    valores = []
+    cont = 'S'
+    while True:
+        if cont == 'N':
+            break
+        elif cont == 'S':
+            n = int(input('Digite um: '))
+            if n in valores:
+                print('Numero ja inserido')
+            else:
+                valores.append(n)
+                print('Valor adicionado com sucesso')
+            cont = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
+        else:
+            print('Letra invalida')
+            cont = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
+    valores.sort()
+    print(f'esse deu ceroto{valores}')
+ex079()
