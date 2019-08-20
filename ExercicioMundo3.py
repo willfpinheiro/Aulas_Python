@@ -101,7 +101,7 @@ def ex079():
         if cont == 'N':
             break
         elif cont == 'S':
-            n = int(input('Digite um: '))
+            n = int(input('Digite um valor: '))
             if n in valores:
                 print('Numero ja inserido')
             else:
