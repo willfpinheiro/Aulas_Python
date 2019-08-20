@@ -103,4 +103,65 @@ def ex079():
             cont = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
     valores.sort()
     print(f'esse deu ceroto{valores}')
-ex079()
+
+def ex080():
+    valores = list()
+    for cont in range(0, 5):
+        num = int(input('Digite um valor: '))
+        if cont == 0:
+            valores.append(num)
+            print('Valor adicionado no final da lista')
+        elif num >= max(valores):
+            valores.append(num)
+            print('Valor adicionado no final da lista')
+        elif num <= min(valores):
+            valores.insert(0, num)
+            print('Adicionado na posição 0')
+        else:
+            contador = 0
+            while True:
+                if num < valores[contador]:
+                    valores.insert(contador, num)
+                    print(f'Adicionado na posição {contador}')
+                    break
+                else:
+                    contador += 1
+    print(valores)
+
+
+def ex081():
+    continuar = 'S'
+    valores = list()
+    elementos = 0
+    while continuar == 'S':
+        valores.append(int(input('Digite um valor: ')))
+        elementos += 1
+        continuar = str(input('Desesa continuar? [S/N]')).upper().strip()[0]
+    print(f'Você digitou {elementos} elementos')
+    valores.sort(reverse=True)
+    print(f'Os valores em ordem decrescente são {valores}')
+    if 5 in valores:
+        print('O valor 5 faz parte da lista')
+    else:
+        print('O valor 5 não faz parte da lista')
+
+
+def ex082():
+    padrao = list()
+    par = list()
+    impar = list()
+    continuar = 'S'
+    while continuar == 'S':
+        padrao.append(int(input('Digite um valor: ')))
+        continuar = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
+    padrao.sort()
+    for v in padrao:
+        if v % 2 == 0:
+            par.append(v)
+        elif v % 2 == 1:
+            impar.append(v)
+    print(f'A lista padrão é {padrao}')
+    print(f'A lista par é {par}')
+    print(f'A lista impar é {impar}')
+
+
