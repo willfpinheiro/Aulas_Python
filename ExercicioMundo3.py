@@ -83,6 +83,16 @@ def ex078():
         if menor == min(lista):
             print(f'{i}...', end=' ')
 
+    #Outra forma, mais facil
+    # numbers = list( )
+    #
+    # for n in range(0, 5):  # declarando variaveis com o laço
+    #     numbers.append(int(input('Digite um valor: ')))
+    #
+    # print(f'''
+    # O maior valor da lista: {max(numbers)} na posição {numbers.index(max(numbers))}
+    # O menor valor da lista: {min(numbers)} ma posição {numbers.index(min(numbers))}''')
+
 
 def ex079():
     valores = []
@@ -172,4 +182,3 @@ def ex083():
         print('Sua expressão esta certa')
     else:
         print('Sua expressão esta errada')
-ex083()
