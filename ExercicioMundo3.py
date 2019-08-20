@@ -115,18 +115,15 @@ def ex079():
     print(f'esse deu ceroto{valores}')
 
 def ex080():
-    valores = list()
+    valores = []
     for cont in range(0, 5):
         num = int(input('Digite um valor: '))
-        if cont == 0:
+        if cont == 0 or num >= max(valores):
             valores.append(num)
             print('Valor adicionado no final da lista')
-        elif num >= max(valores):
-            valores.append(num)
-            print('Valor adicionado no final da lista')
-        elif num <= min(valores):
-            valores.insert(0, num)
-            print('Adicionado na posição 0')
+        # elif num <= min(valores):
+        #     valores.insert(0, num)
+        #     print('Adicionado na posição 0')
         else:
             contador = 0
             while True:
@@ -134,20 +131,19 @@ def ex080():
                     valores.insert(contador, num)
                     print(f'Adicionado na posição {contador}')
                     break
-                else:
-                    contador += 1
+                contador += 1
+    print('=-' * 30)
     print(valores)
 
 
 def ex081():
-    continuar = 'S'
-    valores = list()
-    elementos = 0
-    while continuar == 'S':
+    valores = []
+    while True:
         valores.append(int(input('Digite um valor: ')))
-        elementos += 1
         continuar = str(input('Desesa continuar? [S/N]')).upper().strip()[0]
-    print(f'Você digitou {elementos} elementos')
+        if continuar == 'N':
+            break
+    print(f'Você digitou {len(valores)} elementos')
     valores.sort(reverse=True)
     print(f'Os valores em ordem decrescente são {valores}')
     if 5 in valores:
@@ -157,9 +153,9 @@ def ex081():
 
 
 def ex082():
-    padrao = list()
-    par = list()
-    impar = list()
+    padrao = []
+    par = []
+    impar = []
     continuar = 'S'
     while continuar == 'S':
         padrao.append(int(input('Digite um valor: ')))
