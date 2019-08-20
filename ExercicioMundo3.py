@@ -164,4 +164,12 @@ def ex082():
     print(f'A lista par é {par}')
     print(f'A lista impar é {impar}')
 
-
+def ex083():
+    valores = str(input('Digite a expressão: '))
+    a = valores.count('(')
+    b = valores.count(')')
+    if a == b:
+        print('Sua expressão esta certa')
+    else:
+        print('Sua expressão esta errada')
+ex083()
