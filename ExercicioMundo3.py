@@ -153,13 +153,14 @@ def ex081():
 
 
 def ex082():
-    padrao = []
-    par = []
-    impar = []
-    continuar = 'S'
-    while continuar == 'S':
+    padrao = list()
+    par = list()
+    impar = list()
+    while True:
         padrao.append(int(input('Digite um valor: ')))
         continuar = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
+        if continuar == 'N':
+            break
     padrao.sort()
     for v in padrao:
         if v % 2 == 0:
@@ -172,9 +173,18 @@ def ex082():
 
 def ex083():
     valores = str(input('Digite a expressão: '))
-    a = valores.count('(')
-    b = valores.count(')')
-    if a == b:
+    pilha = []
+    for simb in valores:
+        if simb == '(':
+            pilha.append('(')
+        elif simb == ')':
+            if len(pilha) > 0: #Verifica se o tamanho da pilha esta maior que zero, para assim poder remover
+                pilha.pop()
+            else:
+                pilha.append(')')
+                break
+    if len(pilha) == 0:
         print('Sua expressão esta certa')
     else:
         print('Sua expressão esta errada')
+    print(pilha)
