@@ -222,10 +222,18 @@ def ex084():
             print(f'{p[0]}', end='')
 
 def ex085():
-    numeros = [[], []]
-    for c in range(1, 3):
-        n = int(input('Coloca n: '))
-        k = input('coloca k: ')
+    par = list()
+    impar = []
+    numeros = [par, impar]
+    for c in range(1, 8):
+        n = int(input(f'Digite o {c}º valor: '))
+        if n % 2 == 0:
+            par.append(n)
+        else:
+            impar.append(n)
+    print('=-' * 30)
+    numeros.sort()
+    print(f'Os valores pares digitados, foram: {numeros[0]}')
+    print(f'Os valores impares digitados, foram: {numeros[1]}')
 
 
-ex085()
