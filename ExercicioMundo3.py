@@ -288,4 +288,11 @@ def ex088():
     print('Boa sorte!!!!')
 
 def ex089():
-
+    boletim = [[['will'], [9, 9, 9]], [['amanda'], [10, 10, 10]]]
+    nome = ['will']
+    aluno = [7, 8]
+    m = (aluno[0] + aluno[1]) / 2
+    media = [m]
+    boletim.append([nome[:], aluno, m])
+    print(boletim)
+ex089()
