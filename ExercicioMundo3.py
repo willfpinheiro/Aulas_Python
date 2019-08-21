@@ -289,6 +289,13 @@ def ex088():
 
 def ex089():
     boletim = [[['will'], [9, 9, 9]], [['amanda'], [10, 10, 10]]]
+    while True:
+
+
+
+        continuar = str(input('Deseja continuar: [S/N]')).upper().strip()[0]
+        if continuar == 'N':
+            break
     nome = ['will']
     aluno = [7, 8]
     m = (aluno[0] + aluno[1]) / 2
