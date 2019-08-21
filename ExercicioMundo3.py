@@ -188,3 +188,44 @@ def ex083():
     else:
         print('Sua expressão esta errada')
     print(pilha)
+
+
+def ex084():
+    galera = list()
+    pessoa = list()
+    cont = 0
+    while True:
+        pessoa.append(str(input('Nome: ')))
+        pessoa.append(float(input('Peso: ')))
+        if cont == 0:
+            maior = menor = pessoa[1]
+            cont += 1
+        else:
+            if maior < pessoa[1]:
+                maior = pessoa[1]
+            elif menor > pessoa[1]:
+                menor = pessoa[1]
+        galera.append(pessoa[:])
+        pessoa.clear()
+        continuar = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
+        if continuar == 'N':
+            break
+    print('=-' * 30)
+    print(f'Ao todo você cadastrou {len(galera)}')
+    print(f'O maior peso foi de {maior:.2f}. ', end=' ')
+    for p in galera:
+        if p[1] == maior:
+            print(f'{p[0]}', end=' ')
+    print(f'\nO menor peso foi de {menor:.2f}. ', end=' ')
+    for p in galera:
+        if p[1] == menor:
+            print(f'{p[0]}', end='')
+
+def ex085():
+    numeros = [[], []]
+    for c in range(1, 3):
+        n = int(input('Coloca n: '))
+        k = input('coloca k: ')
+
+
+ex085()
