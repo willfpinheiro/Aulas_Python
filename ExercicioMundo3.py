@@ -240,6 +240,7 @@ def ex086():
     for linha in range(0, 3):
         for coluna in range(0, 3):
             matriz.append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
+    print(('=-'))
     for linha in range(0, 3):
         for coluna in range(0, 3):
             print(f'[ {matriz[cont]} ]', end='')
@@ -248,12 +249,22 @@ def ex086():
 
 def ex087():
     cont = 0
-    matriz = []
+    somapar = soma3 = 0
+    matriz = [[], [], []]
     for linha in range(0, 3):
         for coluna in range(0, 3):
-            matriz.append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
-    for linha in range(0, 3):
-        for coluna in range(0, 3):
-            print(f'[ {matriz[cont]} ]', end='')
-            cont += 1
-        print('\n')
+            matriz[linha].append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
+    print('=-' * 30)
+    for mat in matriz:
+        print(mat)
+    print('=-' * 30)
+    for valor in matriz:
+        soma3 += valor[2]
+        for c in range(0, 3):
+            if valor[c] % 2 == 0:
+                somapar += valor[c]
+    print(f'A soma dos valores pares é: {somapar}')
+    print(f'A soma dos itens da 3 coluna é: {soma3}')
+    print(f'O maior valor da segunda linha é: {max(matriz[1])}')
+
+
