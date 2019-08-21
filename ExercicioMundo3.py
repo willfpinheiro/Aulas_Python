@@ -1,4 +1,5 @@
 import random
+import time
 def ex072():
     numero = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
     print(numero[0])
@@ -266,5 +267,24 @@ def ex087():
     print(f'A soma dos valores pares é: {somapar}')
     print(f'A soma dos itens da 3 coluna é: {soma3}')
     print(f'O maior valor da segunda linha é: {max(matriz[1])}')
+
+def ex088():
+    sena = []
+    jogo = []
+    n = int(input('Quantos jogos você quer fazer? '))
+    print(f'Sorteando {n} jogos')
+    for j in range(0, n):
+        for i in range(0, 6):
+            while True:
+                numero = random.randint(1, 60)
+                if numero not in jogo:
+                    jogo.append(numero)
+                    break
+        jogo.sort()
+        sena.append(jogo[:])
+        jogo.clear()
+        print(f'Jogo {j+1}: {sena[j]}')
+        time.sleep(1)
+    print('Boa sorte!!!!')
 
 
