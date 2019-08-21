@@ -222,18 +222,38 @@ def ex084():
             print(f'{p[0]}', end='')
 
 def ex085():
-    par = list()
-    impar = []
-    numeros = [par, impar]
+    numeros = [[], []]
     for c in range(1, 8):
         n = int(input(f'Digite o {c}º valor: '))
         if n % 2 == 0:
-            par.append(n)
+            numeros[0].append(n)
         else:
-            impar.append(n)
+            numeros[1].append(n)
     print('=-' * 30)
     numeros.sort()
     print(f'Os valores pares digitados, foram: {numeros[0]}')
     print(f'Os valores impares digitados, foram: {numeros[1]}')
 
+def ex086():
+    cont = 0
+    matriz = []
+    for linha in range(0, 3):
+        for coluna in range(0, 3):
+            matriz.append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
+    for linha in range(0, 3):
+        for coluna in range(0, 3):
+            print(f'[ {matriz[cont]} ]', end='')
+            cont += 1
+        print('\n')
 
+def ex087():
+    cont = 0
+    matriz = []
+    for linha in range(0, 3):
+        for coluna in range(0, 3):
+            matriz.append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
+    for linha in range(0, 3):
+        for coluna in range(0, 3):
+            print(f'[ {matriz[cont]} ]', end='')
+            cont += 1
+        print('\n')
