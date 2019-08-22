@@ -288,18 +288,30 @@ def ex088():
     print('Boa sorte!!!!')
 
 def ex089():
-    boletim = [[['will'], [9, 9, 9]], [['amanda'], [10, 10, 10]]]
+    boletim = []
+    nome = []
+    notas = []
+    media = []
+    contnotas = 0
     while True:
-
-
-
+        nome.append(str(input('Nome: ')))
+        for a in range(1, 3):
+            notas.append(float(input(f'Nota {a}: ')))
+        m = (notas[0]+notas[1])/ 2
+        boletim.append([nome[:], notas[:], m])
+        notas.clear()
+        nome.clear()
+        media.clear()
         continuar = str(input('Deseja continuar: [S/N]')).upper().strip()[0]
         if continuar == 'N':
             break
-    nome = ['will']
-    aluno = [7, 8]
-    m = (aluno[0] + aluno[1]) / 2
-    media = [m]
-    boletim.append([nome[:], aluno, m])
-    print(boletim)
+    print("=-" * 30)
+    print('No  Nome      Média')
+    print('-' * 30)
+    for cod, quadro in enumerate(boletim):
+        print(f'{cod}  {quadro[0]}   {quadro[2]}')
+    print('-' * 30)
+    while contnotas is not 999:
+        contnotas = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
+        print(f'Notas da {boletim[contnotas][0]} sao {boletim[contnotas][1]}')
 ex089()
