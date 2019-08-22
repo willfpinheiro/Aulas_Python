@@ -313,5 +313,9 @@ def ex089():
     print('-' * 30)
     while contnotas is not 999:
         contnotas = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
-        print(f'Notas da {boletim[contnotas][0]} sao {boletim[contnotas][1]}')
-ex089()
+        if contnotas != 999:
+            print(f'Notas da {boletim[contnotas][0]} sao {boletim[contnotas][1]}')
+        else:
+            break
+    print('Finalizando....'
+          'Volte sempre')
