@@ -206,18 +206,19 @@ def ex084():
                 maior = pessoa[1]
             elif menor > pessoa[1]:
                 menor = pessoa[1]
-        galera.append(pessoa[:])
-        pessoa.clear()
+        galera.append(pessoa[:]) #Adiciona a lista temp na principal
+        pessoa.clear() #Limpa a lista temp
         continuar = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
         if continuar == 'N':
             break
     print('=-' * 30)
-    print(f'Ao todo você cadastrou {len(galera)}')
+    print(f'Ao todo, você cadastrou {len(galera)} pessoas')
     print(f'O maior peso foi de {maior:.2f}. ', end=' ')
     for p in galera:
         if p[1] == maior:
             print(f'{p[0]}', end=' ')
-    print(f'\nO menor peso foi de {menor:.2f}. ', end=' ')
+    print()
+    print(f'O menor peso foi de {menor:.2f}. ', end=' ')
     for p in galera:
         if p[1] == menor:
             print(f'{p[0]}', end='')
