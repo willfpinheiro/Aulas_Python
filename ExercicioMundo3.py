@@ -300,27 +300,21 @@ def ex088():
 
 def ex089():
     boletim = []
-    nome = []
-    notas = []
-    media = []
     contnotas = 0
     while True:
-        nome.append(str(input('Nome: ')))
-        for a in range(1, 3):
-            notas.append(float(input(f'Nota {a}: ')))
-        m = (notas[0]+notas[1])/ 2
-        boletim.append([nome[:], notas[:], m])
-        notas.clear()
-        nome.clear()
-        media.clear()
+        nome = str(input('Nome: '))
+        nota1 = float(input('Nota 1: '))
+        nota2 = float(input('Nota 2: '))
+        m = (nota1 + nota2) / 2
+        boletim.append([nome, [nota1, nota2], m])
         continuar = str(input('Deseja continuar: [S/N]')).upper().strip()[0]
         if continuar == 'N':
             break
     print("=-" * 30)
-    print('No  Nome      Média')
+    print(f'{"No.":<4}{"Nome":<10}{"Média":>8}')
     print('-' * 30)
     for cod, quadro in enumerate(boletim):
-        print(f'{cod}  {quadro[0]}   {quadro[2]}')
+        print(f'{cod:<4}{quadro[0]:<10}{quadro[2]:>8.1f}')#Organizando a listagem
     print('-' * 30)
     while contnotas is not 999:
         contnotas = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
