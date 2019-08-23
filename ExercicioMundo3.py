@@ -254,19 +254,26 @@ def ex087():
     matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]] #Declarção da matriz
     for linha in range(0, 3):
         for coluna in range(0, 3):
-            matriz[linha].append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
+            matriz[linha][coluna] = int(input(f'Digite um valor para [{linha}, {coluna}]: '))
     print('=-' * 30)
-    for mat in matriz:
-        print(mat)
+    for linha in range(0, 3):
+        for coluna in range(0, 3):
+            print(f'[ {matriz[linha][coluna]:^5} ]', end='')
+            if matriz[linha][coluna] % 2 == 0:
+                somapar += matriz[linha][coluna]
+        print()  # quebra a linha
     print('=-' * 30)
+    #Varre a Matriz e verifica a coluna 3 e soma os valores da coluna 3
+    # Depois varre a lista(linha) e verifica os pares para poder somar
     for valor in matriz:
         soma3 += valor[2]
-        for c in range(0, 3):
-            if valor[c] % 2 == 0:
-                somapar += valor[c]
+    #     for c in range(0, 3):
+    #         if valor[c] % 2 == 0:
+    #             somapar += valor[c]
     print(f'A soma dos valores pares é: {somapar}')
     print(f'A soma dos itens da 3 coluna é: {soma3}')
     print(f'O maior valor da segunda linha é: {max(matriz[1])}')
+    
 
 def ex088():
     sena = []
