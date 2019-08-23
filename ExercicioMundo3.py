@@ -236,23 +236,22 @@ def ex085():
     print(f'Os valores pares digitados, foram: {numeros[0]}')
     print(f'Os valores impares digitados, foram: {numeros[1]}')
 
+
 def ex086():
-    cont = 0
-    matriz = []
+    matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]] #Declarção da matriz
     for linha in range(0, 3):
         for coluna in range(0, 3):
-            matriz.append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
-    print(('=-'))
+            matriz[linha][coluna] = int(input(f'Digite um valor para [{linha}, {coluna}]: '))
+    print(('=-') * 30)
     for linha in range(0, 3):
         for coluna in range(0, 3):
-            print(f'[ {matriz[cont]} ]', end='')
-            cont += 1
-        print('\n')
+            print(f'[ {matriz[linha][coluna]:^5} ]', end='')
+        print() #quebra a linha
+
 
 def ex087():
-    cont = 0
     somapar = soma3 = 0
-    matriz = [[], [], []]
+    matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]] #Declarção da matriz
     for linha in range(0, 3):
         for coluna in range(0, 3):
             matriz[linha].append(int(input(f'Digite um valor para [{linha}, {coluna}]: ')))
