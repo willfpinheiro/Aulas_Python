@@ -224,15 +224,15 @@ def ex084():
             print(f'{p[0]}', end='')
 
 def ex085():
-    numeros = [[], []]
+    numeros = [[], []] #Declarando um lista com duas listas internas
     for c in range(1, 8):
         n = int(input(f'Digite o {c}º valor: '))
-        if n % 2 == 0:
+        if n % 2 == 0: #separa os valores em par e adiciona na primeira posição da lista
             numeros[0].append(n)
-        else:
+        else: #separa os valores em impar e adiciona na posição 2 da lista
             numeros[1].append(n)
     print('=-' * 30)
-    numeros.sort()
+    numeros.sort() #Organiza os valores
     print(f'Os valores pares digitados, foram: {numeros[0]}')
     print(f'Os valores impares digitados, foram: {numeros[1]}')
 
