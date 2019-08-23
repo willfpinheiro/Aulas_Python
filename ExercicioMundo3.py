@@ -273,13 +273,13 @@ def ex087():
     print(f'A soma dos valores pares é: {somapar}')
     print(f'A soma dos itens da 3 coluna é: {soma3}')
     print(f'O maior valor da segunda linha é: {max(matriz[1])}')
-    
+
 
 def ex088():
     sena = []
     jogo = []
     n = int(input('Quantos jogos você quer fazer? '))
-    print(f'Sorteando {n} jogos')
+    print('=-' * 3, f'Sorteando {n} jogos', '=-' * 3)
     for j in range(0, n):
         for i in range(0, 6):
             while True:
@@ -287,12 +287,16 @@ def ex088():
                 if numero not in jogo:
                     jogo.append(numero)
                     break
-        jogo.sort()
-        sena.append(jogo[:])
-        jogo.clear()
+        jogo.sort() #Ordena o jogo
+        sena.append(jogo[:]) #adiciona o jogo na sena completa
+        jogo.clear() #limpa o jogo
         print(f'Jogo {j+1}: {sena[j]}')
         time.sleep(1)
+    # Fazendo o print rodando a lista
+    # for i, l in enumerate(sena):
+    #     print(f'Jogo {i+1}: {l}')
     print('Boa sorte!!!!')
+
 
 def ex089():
     boletim = []
