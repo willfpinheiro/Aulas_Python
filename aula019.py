@@ -49,3 +49,18 @@
 #     print(f'{k} = {v}')
 
 #Colocando um dicionario em uma lista
+estado = dict() # Declarando um dicionario
+brasil = list() #Declarando uma lista
+for c in range(0, 3):
+    estado['Uf'] = str(input('Unidade Federativa: '))
+    estado['sigla'] = str(input('Sigla do Estado: '))
+    brasil.append(estado.copy())
+     # brasil.append(estado[:]) dicionarios não permitem que seja feito a copia atravez do fatiamento
+for e in brasil:
+    print(e)
+    for k, v in e.items():
+        print(f'O campo {k} valor {v}.')
+for e in brasil:
+    for v in e.values():
+        print(v, end='/ ')
+    print()
