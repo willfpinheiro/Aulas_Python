@@ -62,5 +62,5 @@ for e in brasil:
         print(f'O campo {k} valor {v}.')
 for e in brasil:
     for v in e.values():
-        print(v, end='/ ')
+        print(v, end=' ')
     print()

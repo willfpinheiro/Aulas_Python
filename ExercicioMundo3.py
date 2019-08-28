@@ -324,3 +324,9 @@ def ex089():
             break
     print('Finalizando....'
           'Volte sempre')
+
+def ex090():
+    boletim = dict()
+    while True:
+        boletim['nota']
+        boletim['']
