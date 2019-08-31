@@ -327,6 +327,17 @@ def ex089():
 
 def ex090():
     boletim = dict()
-    while True:
-        boletim['nota']
-        boletim['']
+    boletim['Nome'] = str(input('Nome: '))
+    boletim['Media'] = float(input(f'Media de {boletim["Nome"]}: '))
+    if boletim['Media'] <= 7:
+        boletim['Situacao'] = 'Reprovado'
+    else:
+        boletim['Situacao'] = 'Aprovado'
+    print(f'Nome é igual a {boletim["Nome"]}'
+          f'\nMedia é igual a {boletim["Media"]}'
+          f'\nSituação do {boletim["Nome"]} é: {boletim["Situacao"]}')
+
+def ex091():
+    jogos = {'jogador1', 'jogador2', 'jogador3', 'jogador4'}
+    for j in range(0, 4):
+
