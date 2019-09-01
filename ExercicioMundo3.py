@@ -338,6 +338,9 @@ def ex090():
           f'\nSituação do {boletim["Nome"]} é: {boletim["Situacao"]}')
 
 def ex091():
-    jogos = {'jogador1', 'jogador2', 'jogador3', 'jogador4'}
-    for j in range(0, 4):
+    jogos = {'jogador1': random.randint(1, 6), 'jogador2': random.randint(1, 6), 'jogador3': random.randint(1, 6), 'jogador4': random.randint(1, 6)}
+    for k, v in jogos.items():
+        print(f'O {k} tirou {v}')
+        time.sleep(0.5)
 
+ex091()
